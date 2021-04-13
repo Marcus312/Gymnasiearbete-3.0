@@ -12,9 +12,6 @@ include("login-page/check_login.php");
 
 $user_data = check_login($con);
 
-
-
-
 date_default_timezone_set("Europe/stockholm");
 
  ?>
@@ -134,7 +131,7 @@ $('#comment').on('keypress, keydown', function(event) {
     function countCharacters(obj){
       document.getElementById("count-characters").innerHTML = 512 - obj.value.length;
 }
-    // Reset the counter when window is closed (not needed just makes the counter more smooth when making more than 1 post in a row)
+    // Reset the counter when window is closed
     function countReset(){
       document.getElementById("count-characters").innerHTML = 512;
     }
@@ -164,23 +161,20 @@ function hidePost(){
 }
 
 //hides the commentBox when textarea is not empty
+//dålig kod
 function hidePost2(){
-//converts the characters inside textarea to unicode before getting the greater than value, otherwise it will return false either way.
   var x = document.getElementById("comment").value.charCodeAt(0);
   // it breaks if you type just 0 in the textarea
   if (x >= 1){
     for (var element of document.getElementsByClassName("korv")){
    element.style.display="none";
- }
-
-
-
-}
+    }
+  }
 }
 
 
-    // Soruce: https://www.w3schools.com/howto/howto_js_draggable.asp
-    // Make the DIV element draggable:
+    // Source: https://www.w3schools.com/howto/howto_js_draggable.asp
+    // Make the DIV element draggable
     dragElement(document.getElementById("commentForm"));
 
     function dragElement(elmnt) {

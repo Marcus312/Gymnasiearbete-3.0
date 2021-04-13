@@ -36,7 +36,7 @@
         $user_data = mysqli_fetch_assoc($result);
         // Om lösenordet och användarnamnet är lika med det i databasen gå till index.php
         if($user_data['password'] === $password && $user_data['user_name'] === $user_name) {
-          $_SESSION['user_id'] = $user_data['user_id'];
+          $_SESSION['id'] = $user_data['id'];
           header("Location: ../index.php");
 
         } else{ //om lösenordet inte tillhör användaren

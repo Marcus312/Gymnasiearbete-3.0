@@ -11,7 +11,6 @@
     $user_name = mysqli_real_escape_string($con, $_POST["user_name"]);
     $password = mysqli_real_escape_string($con, $_POST["password"]);
     $password2 = mysqli_real_escape_string($con, $_POST["password2"]);
-    $user_id = rand(10000000000, 100000000000);
 
     if(empty($user_name)){
       echo "<div class='oops'>Please fill out username</div>";
@@ -32,13 +31,13 @@
     if(!empty($user_name) && !empty($password) && !(mysqli_num_rows($query123) > 0))
     {
 
-      $sql = "INSERT INTO `users` (`user_id`, `user_name`, `password`) VALUES (?,?,?);";
+      $sql = "INSERT INTO `users` (`user_name`, `password`) VALUES (?,?);";
 
       $stmt = mysqli_stmt_init($con);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
         echo "ERROR BRUH";
       } else {
-        mysqli_stmt_bind_param($stmt, "sss", $user_id, $user_name, $password);
+        mysqli_stmt_bind_param($stmt, "ss", $user_name, $password);
         mysqli_stmt_execute($stmt);
       }
 
