@@ -1,0 +1,65 @@
+
+
+.text{
+  border-radius: 5px;
+  padding: 2px;
+  border: solid thin #aaa;
+  width: 85%;
+  height: 25px;
+  position: absolute;
+  display: inline-block;
+  font-family: arial;
+  font-size: 16px;
+}
+
+.button{
+  background-color: white;
+  color: black;
+  font-family: arial;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  width: 40%;
+  height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: #4CAF50;
+   background-color: green;
+
+}
+
+.box{
+  background-color: white;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  border: solid thin lightgrey;
+  height: auto;
+  font-family: arial;
+}
+
+.link_login{
+  font-family: arial;
+}
+
+
+.oops{
+  color:red;
+  top: 15%;
+  left: 5%;
+  transform: translate(-15%,-5%);
+  width: auto;
+  padding: 20px;
+  position: absolute;
+  height: auto;
+  font-family: arial;
+  font-size: 25px;
+  text-decoration: underline;
+  z-index: 1;
+}

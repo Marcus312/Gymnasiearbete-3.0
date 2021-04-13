@@ -1,0 +1,115 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 02, 2020 at 10:30 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `renskav`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL,
+  `parent_id` int(11) NOT NULL,
+  `comment` varchar(512) NOT NULL,
+  `sender` varchar(100) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id`, `parent_id`, `comment`, `sender`, `date`) VALUES
+(25, 0, 'This is a Post', 'Anonomous', '2020-10-23 14:13:00'),
+(26, 25, 'This is a comment\r\n', 'Anonomous', '2020-10-23 14:13:06'),
+(27, 25, 'This is another comment', 'Anonomous', '2020-10-23 14:13:15'),
+(28, 0, 'This is another POST', 'Anonomous', '2020-10-23 14:18:27'),
+(29, 28, 'Kekler', 'Anonomous', '2020-10-23 14:29:47'),
+(30, 0, 'This is a post KEK\r\n', 'Anonomous', '2020-10-23 14:47:10'),
+(31, 30, 'Cumment', 'Anonomous', '2020-10-23 14:49:44'),
+(32, 0, 'hi', 'Anonomous', '2020-10-23 15:01:46'),
+(33, 32, 'hihi', 'Anonomous', '2020-10-23 15:03:10'),
+(34, 32, 'GAMER', 'anonymous', '2020-10-23 15:04:25'),
+(35, 32, 'gamer', 'anonymous', '2020-10-23 15:04:31'),
+(36, 0, 'Hello fellow gamers', 'Marcus', '2020-10-27 09:20:45'),
+(37, 36, 'hi', 'anonymous', '2020-10-27 09:34:14'),
+(38, 0, 'Sup gamers', 'anonymous', '2020-11-02 09:25:09'),
+(39, 38, 'Hello', 'anonymous', '2020-11-02 09:25:14');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `user_id`, `user_name`, `password`, `date`) VALUES
+(1, 26203576918848, 'marcus', '123', '2020-10-23 10:41:56');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

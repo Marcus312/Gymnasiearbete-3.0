@@ -1,0 +1,70 @@
+body{
+  background-color:#ACDDDE;
+
+}
+
+ #bild{
+  height: 10.67vmin;
+  width: 100vmin;
+  margin: auto;
+  margin-bottom: 1%;
+  background-image: url("images/bild1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;*/
+}
+
+#menu{
+  border-bottom: 0.1vmin solid #A1998D;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: -5px;
+}
+
+#welcome-sign{
+  font-size:4.2vmin;
+  text-transform: capitalize;
+  cursor: default;
+  user-select: none;
+  margin-left: 10px;
+  color: black;
+  font-family: arial;
+}
+
+#logout-button{
+  float:right;
+  background-color: white;
+  color: black;
+  font-family: arial;
+  font-size: 2.45vmin;
+  transition-duration: 0.3s;
+  width: 10%;
+  height: 4.26vmin;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 45%;
+  border: 0.1vmin solid black;
+}
+
+#logout-button:hover{
+  background-color: green;
+  color: white;
+}
+
+#btn123{
+  background-color: white;
+  color: black;
+  font-family: arial;
+  font-size: 1.7vmin;
+  transition-duration: 0.2s;
+  width: 10%;
+  height: 4.26vmin;
+  font-weight: bold;
+  border: 0.1vmin solid black;
+  cursor: pointer;
+  margin-left: 45%;
+}
+#btn123:hover{
+   background-color: green;
+   color:white;
+}
