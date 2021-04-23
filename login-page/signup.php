@@ -46,7 +46,7 @@
 
       //användarnamnet är upptaget error
     } else{
-    echo "<div class='oops'>".$_POST['user_name']." is already taken</div>";
+    echo "<div class='oops'>Username: ".$_POST['user_name']." is already taken</div>";
       }
      }
     }
