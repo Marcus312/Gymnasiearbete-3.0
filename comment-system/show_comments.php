@@ -25,8 +25,8 @@ while($comment = mysqli_fetch_assoc($commentsResult)){
 
 	//POSTS-----------------------------------------------------------------------
 	$commentHTML .= '
-		<div style="border-top: 0.1vmin solid #A1998D; margin-top:4.2vmin;  background-color: white; word-wrap: break-word; min-height: 8.53vmin;"><div>
-		<div style="color:black; margin-left:0.3vmin; font-family:arial; font-size: 1.49vmin;"><b style="text-transform: capitalize; font-size: 1.6vmin">'.$comment["sender"].'</b>  <a>'.$comment["date"].'</a>
+		<div style="border-top: 1px solid #A1998D; margin-top:39px;  background-color: white; word-wrap: break-word; min-height: 80px;"><div>
+		<div style="color:black; margin-left:3px; font-family:arial; font-size: 14px;"><b style="text-transform: capitalize; font-size: 16px">'.$comment["sender"].'</b>  <a>'.$comment["date"].'</a>
 	';
 
 	$commentHTML .= '
@@ -36,7 +36,7 @@ while($comment = mysqli_fetch_assoc($commentsResult)){
 //htmlentities för att användarna inte ska kunna skriva in html kod på hemsidan
 //användar text
 	$commentHTML .= '
-		<div id="outputText"  style="width:50%; white-space:pre-wrap; color: black; font-family:arial; font-size:1.49vmin; margin-left:0.3vmin;">'.htmlentities($comment["comment"]).'</div> ';
+		<div id="outputText"  style="width:50%; white-space:pre-wrap; color: black; font-family:arial; font-size:14px; margin-left:3px;">'.htmlentities($comment["comment"]).'</div> ';
 
 	$commentHTML .= '
 		</div> ';
@@ -64,19 +64,19 @@ function getCommentReply($con, $parentId = 0) {
 // REPLY------------------------------------------------------------------------
 
 
-			$commentHTML .= '	<div style="  margin-left: 4.2vmin; margin:bottom: 0.42vmin; border-bottom: 0.1vmin solid #A1998D; border-right: 0.1vmin solid #A1998D; max-width:50%; min-width:25%; word-wrap: break-word; ">
+			$commentHTML .= '	<div style="  margin-left: 40px; margin:bottom: 4px; border-bottom: 1px solid #A1998D; border-right: 1px solid #A1998D; max-width:50%; min-width:25%; word-wrap: break-word; ">
 			';
 
-			$commentHTML .= '<div style="background-color: #f2f2f2; min-height: 6.4vmin;">
+			$commentHTML .= '<div style="background-color: #f2f2f2; min-height: 60px;">
 			';
 
-			$commentHTML .= '<div style="color:black; font-family:arial; font-size:1.49vmin; margin-left:0.3vmin;"><b style="text-transform: capitalize;
-			font-family:arial; font-size:1.6vmin;">'.$comment["sender"].'</b> <a>'.$comment["date"].' [<a type="button" style="color:blue; cursor:pointer;" onclick="showPost();" class="reply2" id="'.$comment["id"].'"> Reply </a> ]
+			$commentHTML .= '<div style="color:black; font-family:arial; font-size:14px; margin-left:3px;"><b style="text-transform: capitalize;
+			font-family:arial; font-size:15px;">'.$comment["sender"].'</b> <a>'.$comment["date"].' [<a type="button" style="color:blue; cursor:pointer;" onclick="showPost();" class="reply2" id="'.$comment["id"].'"> Reply </a> ]
 			Reply id: <a>'.$comment["id"].'</a></div>
 			';
 			//htmlentities för att användarna inte ska kunna skriva in html kod på hemsidan
 			//användar text
-			$commentHTML .= '	<div id="outputText" style=" white-space:pre-wrap; color: black; font-family: arial; font-size:1.49vmin; margin-left:0.3vmin;">'.htmlentities($comment["comment"]).'</div>
+			$commentHTML .= '	<div id="outputText" style=" white-space:pre-wrap; color: black; font-family: arial; font-size:14px; margin-left:3px;">'.htmlentities($comment["comment"]).'</div>
 			';
 
 			$commentHTML .= '		</div></div>

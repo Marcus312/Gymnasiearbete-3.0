@@ -4,8 +4,8 @@ body{
 }
 
  #bild{
-  height: 10.67vmin;
-  width: 100vmin;
+  height: 100px;
+  width: 937px;
   margin: auto;
   margin-bottom: 1%;
   background-image: url("images/bild1.png");
@@ -15,14 +15,14 @@ body{
 }
 
 #menu{
-  border-bottom: 0.1vmin solid #A1998D;
+  border-bottom: 1px solid #A1998D;
   width: 100%;
   margin-bottom: 20px;
   margin-top: -5px;
 }
 
 #welcome-sign{
-  font-size:4.2vmin;
+  font-size:40px;
   text-transform: capitalize;
   cursor: default;
   user-select: none;
@@ -36,14 +36,14 @@ body{
   background-color: white;
   color: black;
   font-family: arial;
-  font-size: 2.45vmin;
+  font-size: 23px;
   transition-duration: 0.3s;
   width: 10%;
-  height: 4.26vmin;
+  height: 40px;
   font-weight: bold;
   cursor: pointer;
   margin-left: 45%;
-  border: 0.1vmin solid black;
+  border: 1px solid black;
 }
 
 #logout-button:hover{
@@ -55,12 +55,12 @@ body{
   background-color: white;
   color: black;
   font-family: arial;
-  font-size: 1.7vmin;
+  font-size: 16px;
   transition-duration: 0.2s;
   width: 10%;
-  height: 4.26vmin;
+  height: 40px;
   font-weight: bold;
-  border: 0.1vmin solid black;
+  border: 1px solid black;
   cursor: pointer;
   margin-left: 45%;
 }
