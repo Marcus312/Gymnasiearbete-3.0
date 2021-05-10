@@ -109,21 +109,6 @@ date_default_timezone_set("Europe/stockholm");
   		$("#comment").attr("placeholder", "Reply to reply: " + commentId);
   		//Ändrar namnet på submit knappen
   		$("#submit").val("Reply to reply");
-
-/**
-// Jesus christ it actually works
-//https://stackoverflow.com/questions/26092700/partially-read-only-textbox?noredirect=1&lq=1
-var readOnlyLength = $('#comment').val().length;
-$('#output').text(readOnlyLength);
-$('#comment').on('keypress, keydown', function(event) {
-    var $field = $(this);
-    $('#output').text(event.which + '-' + this.selectionStart);
-    if ((event.which != 37 && (event.which != 39))
-        && ((this.selectionStart < readOnlyLength)
-        || ((this.selectionStart == readOnlyLength) && (event.which == 8)))) {
-        return false;
-    }
-});*/
   	});
 
 
