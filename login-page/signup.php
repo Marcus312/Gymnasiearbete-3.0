@@ -12,15 +12,15 @@
     $password = mysqli_real_escape_string($con, $_POST["password"]);
     $password2 = mysqli_real_escape_string($con, $_POST["password2"]);
 
-    if(empty($user_name)){
+    if(empty($user_name)){//om användarnamet är tomt:
       echo "<div class='oops'>Please fill out username</div>";
     } else{
 
-    if(empty($password)){
+    if(empty($password)){//om lösenordet är tomt:
       echo "<div class='oops'>Please fill out password</div>";
     } else {
 
-    if($password != $password2){
+    if($password != $password2){ // om lösenorden inte är lika: 
       echo "<div class='oops'>Passwords doesn't match</div>";
     } else {
 

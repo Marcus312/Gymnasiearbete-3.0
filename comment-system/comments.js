@@ -3,7 +3,6 @@
 
 $(document).ready(function(){
 
-	//show comment funktion
 	showComments();
 
 	//on submit

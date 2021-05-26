@@ -13,7 +13,7 @@ body{
   background-size: cover;
   background-position: center;*/
 }
-
+/*meny container*/
 #menu{
   border-bottom: 1px solid #A1998D;
   width: 100%;
@@ -50,7 +50,7 @@ body{
   background-color: green;
   color: white;
 }
-
+/*Create post knapp*/
 #btn123{
   background-color: white;
   color: black;

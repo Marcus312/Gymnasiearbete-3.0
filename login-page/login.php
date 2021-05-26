@@ -14,11 +14,11 @@
     $password = mysqli_real_escape_string($con, $_POST["password"]);
 
 
-    if (empty($user_name)){
+    if (empty($user_name)){ // om användarnamnet är tomt:
       echo "<div class='oops'>Please fill out your username</div>";
     } else{
 
-    if (empty($password)){
+    if (empty($password)){ //om lösenordet är tomt: 
       echo "<div class='oops'>Please fill out your password</div>";
     } else{
 

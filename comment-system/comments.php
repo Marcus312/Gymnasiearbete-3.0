@@ -2,7 +2,7 @@
 include("../connection.php");
 date_default_timezone_set("Europe/stockholm");
 
-
+// Insert the stuff into the database
 
 if(!empty($_POST["name"]) && !empty($_POST["comment"])){
 

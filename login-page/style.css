@@ -11,7 +11,7 @@
   font-family: arial;
   font-size: 16px;
 }
-
+/*submit btn*/
 .button{
   background-color: white;
   color: black;
@@ -29,7 +29,7 @@
    background-color: green;
 
 }
-
+/*container*/
 .box{
   background-color: white;
   top: 40%;
@@ -48,7 +48,7 @@
   font-family: arial;
 }
 
-
+/* Fel medelande*/
 .oops{
   color:red;
   top: 15%;
